@@ -7,24 +7,6 @@
 [submodule "select2-bootstrap-theme"]
 	path = select2-bootstrap-theme
 	url = https://github.com/select2/select2-bootstrap-theme.git
-[submodule "select2"]
-	path = select2
-	url = https://github.com/select2/select2.git
 [submodule "clipboard.js"]
 	path = clipboard.js
 	url = https://github.com/zenorocha/clipboard.js.git
-[submodule "moment"]
-	path = moment
-	url = https://github.com/moment/moment.git
-[submodule "moment-timezone"]
-	path = moment-timezone
-	url = https://github.com/moment/moment-timezone.git
-[submodule "bootstrap-datepicker"]
-	path = bootstrap-datepicker
-	url = https://github.com/uxsolutions/bootstrap-datepicker.git
-[submodule "bootstrap-daterangepicker"]
-	path = bootstrap-daterangepicker
-	url = https://github.com/dangrossman/bootstrap-daterangepicker.git
-[submodule "Chart.js"]
-	path = Chart.js
-	url = https://github.com/chartjs/Chart.js.git
