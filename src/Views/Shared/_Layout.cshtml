@@ -1,0 +1,154 @@
+@using System.Threading
+@using System.Web.Optimization
+@using Abp.Web.Mvc.Extensions
+@using Abp.Timing
+@{
+    SetAntiForgeryCookie();
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="~/favicon.ico">
+        <title>AdminLTE-Pack</title>
+        <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap/css/bootstrap.min.css")">
+        <link rel="stylesheet" href="@Url.Content("~/Content/font-awesome/css/font-awesome.min.css")">
+        <link rel="stylesheet" href="@Url.Content("~/Content/AdminLTE/css/adminlte.min.css")">
+        <link rel="stylesheet" href="@Url.Content("~/Content/AdminLTE/css/skins/_all-skins.min.css")">
+
+        <!-- View specific styles -->
+        @RenderSection("styles", required: false)
+        <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+        </script>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="@Url.Content("~/Content/html5shiv/html5shiv.js")"></script>
+            <script src="@Url.Content("~/Content/respond/respond.min.js")"></script>
+        <![endif]-->
+    </head>
+    <body class="skin-blue" data-spy="scroll" data-target="#scrollspy">
+        <div class="wrapper">
+            <header class="main-header">
+                <!-- Logo -->
+                <a href="../index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>A</b>LT</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Admin</b>LTE</span>
+                </a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                    <li><a href="https://adminlte.io">Almsaeed Studio</a></li>
+                    <li><a href="https://adminlte.io/premium">Premium Templates</a></li>
+                    </ul>
+                </div>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <div class="sidebar" id="scrollspy">
+
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="nav sidebar-menu">
+                    <li class="header">TABLE OF CONTENTS</li>
+                    <li class="active"><a href="#introduction"><i class="fa fa-circle-o"></i> Introduction</a></li>
+                    <li><a href="#download"><i class="fa fa-circle-o"></i> Download</a></li>
+                    <li><a href="#dependencies"><i class="fa fa-circle-o"></i> Dependencies</a></li>
+                    <li><a href="#advice"><i class="fa fa-circle-o"></i> Advice</a></li>
+                    <li><a href="#layout"><i class="fa fa-circle-o"></i> Layout</a></li>
+                    <li><a href="#adminlte-options"><i class="fa fa-circle-o"></i> Javascript Options</a></li>
+                    <li class="treeview" id="scrollspy-components">
+                    <a href="javascript:void(0)"><i class="fa fa-circle-o"></i> Components</a>
+                    <ul class="nav treeview-menu">
+                        <li><a href="#component-main-header">Main Header</a></li>
+                        <li><a href="#component-sidebar">Sidebar</a></li>
+                        <li><a href="#component-control-sidebar">Control Sidebar</a></li>
+                        <li><a href="#component-info-box">Info Box</a></li>
+                        <li><a href="#component-box">Boxes</a></li>
+                        <li><a href="#component-direct-chat">Direct Chat</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#plugins"><i class="fa fa-circle-o"></i> Plugins</a></li>
+                    <li><a href="#browsers"><i class="fa fa-circle-o"></i> Browser Support</a></li>
+                    <li><a href="#upgrade"><i class="fa fa-circle-o"></i> Upgrade Guide</a></li>
+                    <li><a href="#implementations"><i class="fa fa-circle-o"></i> Implementations</a></li>
+                    <li><a href="#faq"><i class="fa fa-circle-o"></i> FAQ</a></li>
+                    <li><a href="#license"><i class="fa fa-circle-o"></i> License</a></li>
+                </ul>
+                </div>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                <h1>
+                    AdminLTE Documentation
+                    <small>Version 2.3</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li class="active">Documentation</li>
+                </ol>
+                </div>
+
+                <!-- Main content -->
+                <div class="content body">
+                @RenderBody()
+                </div>
+            </div><!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.12
+                </div>
+                <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+                reserved.
+            </footer>
+
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Create the tabs -->
+                <div class="pad">
+                This is an example of the control sidebar.
+                </div>
+            </aside><!-- /.control-sidebar -->
+            <!-- Add the sidebar's background. This div must be placed
+                immediately after the control sidebar -->
+            <div class="control-sidebar-bg"></div>
+        </div><!-- ./wrapper -->
+
+        <script src="@Url.Content("~/Content/jQuery/jquery.min.js")"></script>
+        <script src="@Url.Content("~/Content/bootstrap/bootstrap.min.js")"></script>
+        <script src="@Url.Content("~/Content/AdminLTE/adminlte.min.js")"></script>
+        <script>
+            //Localizing momentjs
+            moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+        </script>
+
+        <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+        <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+        <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+
+        <!-- SignalR scripts -->
+        <script src="~/signalr/hubs"></script>
+        @Html.IncludeScript("~/Abp/Framework/scripts/libs/abp.signalr.js")
+
+        <!-- View specific scripts -->
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

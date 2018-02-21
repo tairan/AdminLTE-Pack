@@ -1,17 +1,22 @@
 <?xml version="1.0"?>
 <package>
     <metadata>
-        <id>AdminLTE-Pack</id>
+        <id>Abp-AdminLTE-Pack</id>
         <version>0.1</version>
-        <title>AdminLTE-Pack</title>
+        <title>Abp AdminLTE Pack</title>
         <authors>Tairan Wang</authors>
         <owners>Tairan Wang</owners>
         <licenseUrl>https://github.com/tairan/AdminLTE-Pack/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/tairan/AdminLTE-Pack</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Based on AdminLTE</description>
+        <description>A web framework based on AdminLTE for Abp.</description>
         <copyright>Copyright 2017 - 2018</copyright>
-        <tags>Bootstrap AdminLTE</tags>
+        <tags>Bootstrap AdminLTE Apb</tags>
+        <dependencies>
+            <group>
+                <dependency id="Abp.Web.Resources" version="2.3.0" />
+            </group>
+        </dependencies>
     </metadata>
     <files>
         <file src="node_modules\bootstrap\dist\**\*.*" target="Content\bootstrap" />
@@ -24,5 +29,6 @@
         <file src="node_modules\jquery\dist\jquery.*" target="Content\jQuery" />
         <file src="AdminLTE\dist\**\*.*" target="Content\AdminLTE" />
         <file src="AdminLTE\plugins\**\*.*" target="Content" />
+        <file src="src\Views\Shared\_Layout.cshtml" target="Views\Shared\_AdminLTE.cshtml" />
     </files>
 </package>
