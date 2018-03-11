@@ -4,7 +4,8 @@
   "scripts": {
     "serv": "webpack-dev-server",
     "build": "webpack --env dev --verbose --color --mode development",
-    "start": "webpack --env build"
+    "start": "webpack --env build",
+    "build:assets": "gulp" 
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -20,6 +21,7 @@
     "flot": "^0.8.0-alpha",
     "font-awesome": "^4.7.0",
     "fullcalendar": "^3.4.0",
+    "gulp": "^3.9.1",
     "html-webpack-plugin": "^3.0.6",
     "html5shiv": "^3.7.3",
     "inputmask": "^3.3.7",
